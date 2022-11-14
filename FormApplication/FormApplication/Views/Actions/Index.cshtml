@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@using (Html.BeginForm("Login", "Actions", FormMethod.Post))
+{
+   @* <ol>
+        <li>
+            @Html.Label("User Name:")
+            @Html.TextBox("txtUser")
+        </li>
+        <br>
+        <li>
+            @Html.Label("User ID:")
+            @Html.TextBox("txtId")
+        </li>
+        <br>
+        <li>
+            @Html.Label("User Department:")
+            @Html.TextBox("txtDept")
+        </li>
+    </ol>*@
+     <li>
+            @Html.Label("User Name:")
+            @Html.TextBox("txtUser")
+        </li>
+        <br>
+        <li>
+            @Html.Label("Passord:")
+            @Html.Password("txtPass")
+        </li>
+    <input type="submit" value="Enter">
+}

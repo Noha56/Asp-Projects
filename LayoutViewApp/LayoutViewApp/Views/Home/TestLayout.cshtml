@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "TestLayout";
+    Layout = "~/Views/shared/_LayoutBasic.cshtml";
+}
+@section header{
+    <p>new header</p>
+}
+
+@section footer{
+    <p>new footer</p>
+}
+
+@section summary{
+    <p>m7md</p>
+}
+
+@Html.Partial("PView")
+
+<h1>TestLayout</h1>
+<p>
+    TempData is used to transfer data from view to controller, controller to view, or from one action method to another action method of the same or a different controller.
+
+TempData stores the data temporarily and automatically removes it after retrieving a value.
+
+TempData is a property in the ControllerBase class. So, it is available in any controller or view in the ASP.NET MVC application.
+
+The following example shows how to transfer data from one action method to another using TempData.
+
+
+
+
+</p>
+
+@section note{
+    <p>noha</p>
+}

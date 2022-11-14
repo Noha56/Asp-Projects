@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="3">
+                Header
+                @RenderSection("header",true)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Note
+                 @RenderSection("note",false)
+            </td>
+            <td>
+                @RenderBody()
+            </td>
+            <td>Summary
+                 @RenderSection("summary",false)
+            </td>
+           @* false=optional*@
+            
+        </tr>
+        <tr>
+            <td colspan="3">
+                Footer
+                 @RenderSection("footer",true)
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

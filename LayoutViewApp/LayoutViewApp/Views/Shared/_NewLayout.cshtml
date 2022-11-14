@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <table border="1">
+        <tr><td>p1 @RenderSection("p1",true)</td></tr>
+        <tr><td>p2 @RenderSection("p2",false)</td></tr>
+        <tr><td> @RenderBody()</td></tr>
+    </table>
+  
+</body>
+</html>
