@@ -8619,11 +8619,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\96279\\Desktop\\thaluf\\AttributeRountingApp\\AttributeRountingApp\\AttributeRountingApp.csproj",
+      "projectUniqueName": "C:\\Users\\96279\\Desktop\\Asp-Projects\\AttributeRountingApp\\AttributeRountingApp\\AttributeRountingApp.csproj",
       "projectName": "AttributeRountingApp",
-      "projectPath": "C:\\Users\\96279\\Desktop\\thaluf\\AttributeRountingApp\\AttributeRountingApp\\AttributeRountingApp.csproj",
+      "projectPath": "C:\\Users\\96279\\Desktop\\Asp-Projects\\AttributeRountingApp\\AttributeRountingApp\\AttributeRountingApp.csproj",
       "packagesPath": "C:\\Users\\96279\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\96279\\Desktop\\thaluf\\AttributeRountingApp\\AttributeRountingApp\\obj\\",
+      "outputPath": "C:\\Users\\96279\\Desktop\\Asp-Projects\\AttributeRountingApp\\AttributeRountingApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\96279\\AppData\\Roaming\\NuGet\\NuGet.Config",

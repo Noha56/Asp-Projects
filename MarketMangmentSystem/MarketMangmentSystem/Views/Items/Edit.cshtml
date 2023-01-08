@@ -1,0 +1,20 @@
+﻿@model Item
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+@using (Html.BeginForm("Edit", "Items", FormMethod.Post))
+{
+
+    <table>
+        <tr>
+            <td>@Html.LabelFor(m=>m.Barcode)</td>
+            <td>@Html.TextBoxFor(m=>m.Barcode)</td>
+        </tr>
+        <tr>
+          <td>  <input type="submit" value="Edit"></td>
+        </tr>
+    </table>
+}

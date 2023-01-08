@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "Books";
+    Layout = "~/Views/Shared/BookView.cshtml";
+}
+
+<!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a asp-action="index" asp-controller="Books">Home</a></li>
+          <li>@ViewData["Title"]</li>
+        </ol>
+        <h2>@ViewData["Title"]</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+
+@foreach (var item in Model)
+{
+    <!-- ======= Featured Section ======= -->
+    <section id="featured" class="featured">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 mt-2 mt-ls-0 ">
+                    <div class="icon-box">
+                        <i class="bi bi-card-checklist"></i>
+                        <h3>Book id: @item.BookId</h3>
+                        <h3>Title: @item.BookTitle</h3>
+                        <h3>Serial Number: @item.SerialNumber</h3>
+                        <h3>Author: @item.AuthorName</h3>
+                        <h3>Publisher: @item.PublisherName</h3>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- End Featured Section -->
+}
+
+ @section About{
+
+     @Html.Partial("socialMediaView")
+       
+    }

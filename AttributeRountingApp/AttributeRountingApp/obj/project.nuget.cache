@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U8tbo/3ouUKYWWud/ayjEgLxry8NRSe4AXGty2ncwJZOuxlYLJCLN5tr/RiqDeASsclsOdtQBxeL0g+hj2D1bA==",
+  "dgSpecHash": "K0pLtEiht3wj2H+JHxXqK95vtIIf3awnSc/N9RPXpFzF6098lwYAgXd1/ls1Qvkq6TDvUioWXtgW0q03OmzJAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\96279\\Desktop\\thaluf\\AttributeRountingApp\\AttributeRountingApp\\AttributeRountingApp.csproj",
+  "projectFilePath": "C:\\Users\\96279\\Desktop\\Asp-Projects\\AttributeRountingApp\\AttributeRountingApp\\AttributeRountingApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\96279\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\96279\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

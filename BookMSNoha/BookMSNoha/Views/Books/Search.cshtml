@@ -1,0 +1,91 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Search";
+     Layout = "BookView";
+}
+
+<!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a asp-action="index" asp-controller="Books">Home</a></li>
+          <li>@ViewData["Title"]</li>
+        </ol>
+        <h2>@ViewData["Title"]</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+
+@using(Html.BeginForm(FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(m=>m.BookId)
+            </td>
+        <td>
+                @Html.TextBoxFor(m=>m.BookId)
+            </td>
+            <td>  <input type="submit" formaction="/Books/SearchById" class="btn btn-secondary btn-sm" value="Search By Id" style="background-color: #ff8243;" />
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m=>m.BookTitle)
+            </td>
+            <td>
+                @Html.TextBoxFor(m=>m.BookTitle)
+            </td>
+            <td>
+                <input type="submit" formaction="/Books/SearchByTitle" class="btn btn-secondary btn-sm" value="Search By Title" style="background-color: #ff8243;" />
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m=>m.SerialNumber)
+            </td>
+            <td>
+                @Html.TextBoxFor(m=>m.SerialNumber)
+            </td>
+            <td>
+                <input type="submit" formaction="/Books/SearchBySerialNumber" class="btn btn-secondary btn-sm" value="Search By Serial Number" style="background-color: #ff8243;" />
+            </td>
+
+        </tr>
+          <tr>
+            <td>
+                @Html.LabelFor(m=>m.AuthorName)
+            </td>
+            <td>
+                @Html.TextBoxFor(m=>m.AuthorName)
+            </td>
+            <td>
+                <input type="submit" formaction="/Books/SearchByAuthor" class="btn btn-secondary btn-sm" value="Search By Author Name" style="background-color: #ff8243;" />
+            </td>
+
+        </tr>
+          <tr>
+            <td>
+                @Html.LabelFor(m=>m.PublisherName)
+            </td>
+            <td>
+                @Html.TextBoxFor(m=>m.PublisherName)
+            </td>
+            <td>
+                <input type="submit" formaction="/Books/SearchByPublisher" class="btn btn-secondary btn-sm" value="Search By Publisher Name" style="background-color: #ff8243;" />
+            </td>
+
+        </tr>
+    </table>
+}
+
+ @section About{
+
+     @Html.Partial("socialMediaView")
+       
+    }

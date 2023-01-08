@@ -8,26 +8,39 @@
 <!-- Search form -->
 <div class="row" style="padding-top:10%">
     <div class="col-4">
-     
-    
 
-   
+        @using (Html.BeginForm(FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m=>m.Barcode)
+                    </td>
+                    <td>@Html.TextBoxFor(m=>m.Barcode)</td>
+                    <td><input type="submit" formaction="/Items/Search" value=" Search"></td>
 
-@using (Html.BeginForm("Search", "Items", FormMethod.Post))
-{
-    <table>
-        <tr>
-            <td>
-                @Html.LabelFor(m=>m.Barcode)
-            </td>
-            <td>@Html.TextBoxFor(m=>m.Barcode)</td>
-            <td><input type="submit" value=" Search"></td>
 
-        </tr>
-    </table>
 
-}     
-</div>
 
+                </tr>
+
+                <tr>
+                    <td>
+                        @Html.LabelFor(m=>m.Price)
+                    </td>
+                    <td>@Html.TextBoxFor(m=>m.Price)</td>
+                    <td><input type="submit" formaction="/Items/Search2" value=" Search"></td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m=>m.Desc)
+                    </td>
+                    <td>@Html.TextBoxFor(m=>m.Desc)</td>
+                    <td><input type="submit" formaction="/Items/Search3" value=" Search"></td>
+                </tr>
+
+            </table>
+        }
+    </div>
 </div>
 

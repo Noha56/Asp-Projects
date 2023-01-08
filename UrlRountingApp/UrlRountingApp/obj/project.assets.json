@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\96279\\Desktop\\thaluf\\UrlRountingApp\\UrlRountingApp\\UrlRountingApp.csproj",
+      "projectUniqueName": "C:\\Users\\96279\\Desktop\\Asp-Projects\\UrlRountingApp\\UrlRountingApp\\UrlRountingApp.csproj",
       "projectName": "UrlRountingApp",
-      "projectPath": "C:\\Users\\96279\\Desktop\\thaluf\\UrlRountingApp\\UrlRountingApp\\UrlRountingApp.csproj",
+      "projectPath": "C:\\Users\\96279\\Desktop\\Asp-Projects\\UrlRountingApp\\UrlRountingApp\\UrlRountingApp.csproj",
       "packagesPath": "C:\\Users\\96279\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\96279\\Desktop\\thaluf\\UrlRountingApp\\UrlRountingApp\\obj\\",
+      "outputPath": "C:\\Users\\96279\\Desktop\\Asp-Projects\\UrlRountingApp\\UrlRountingApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\96279\\AppData\\Roaming\\NuGet\\NuGet.Config",

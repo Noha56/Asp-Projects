@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BookMSNoha.Models.Book>
+
+@{
+    ViewData["Title"] = "DisplayBooks";
+    Layout = "BookView";
+
+}
+
+<!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a asp-action="index" asp-controller="Books">Home</a></li>
+          <li>@ViewData["Title"]</li>
+        </ol>
+        <h2>@ViewData["Title"]</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+
+<p>
+    <a asp-action="AddBook">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BookId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SerialNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublisherName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SerialNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublisherName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.BookId  }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.BookId  }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.BookId  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+                
+ @section About{
+
+     @Html.Partial("socialMediaView")
+       
+    }

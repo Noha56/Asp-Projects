@@ -5,7 +5,7 @@
 
 <h1>AddItme</h1>
 
-@using (Html.BeginForm("AddItme", "Items", FormMethod.Post))
+@using (Html.BeginForm("AddItme", "Items", FormMethod.Post,new { enctype = "multipart/form-data" }) )
 {
     <table>
 
@@ -32,6 +32,14 @@
             </td>
             <td>
                 @Html.TextBoxFor(m=>m.Price)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m=>m.ImageFile)
+            </td>
+            <td>
+                <input asp-for="ImageFile" accept="image/*"> 
             </td>
         </tr>
         <td><input type="submit" value="Add"></td>
