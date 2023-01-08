@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "FormBook";
+}
+
+<h1>FormBook</h1>
+
+@using(@Html.BeginForm("AddBook","Books",FormMethod.Post)){
+    <table>
+        <tr>
+            <td>@Html.Label("ISBN")</td>
+            <td>@Html.TextBox("isbn")</td>
+
+        </tr><br>
+         <tr>
+            <td>@Html.Label("Title")</td>
+            <td>@Html.TextBox("btitle")</td>
+
+        </tr><br>
+         <tr>
+            <td>@Html.Label("Price")</td>
+            <td>@Html.TextBox("price")</td>
+
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="ADD Book">
+            </td>
+        </tr>
+    </table>
+}
+

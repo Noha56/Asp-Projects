@@ -1,0 +1,40 @@
+﻿@model Item
+@{
+    ViewData["Title"] = "AddItme";
+}
+
+<h1>AddItme</h1>
+
+@using (Html.BeginForm("AddItme", "Items", FormMethod.Post))
+{
+    <table>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m=>m.Barcode)
+            </td>
+            <td>
+                @Html.TextBoxFor(m=>m.Barcode)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m=>m.Desc)
+            </td>
+            <td>
+                @Html.TextBoxFor(m=>m.Desc)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m=>m.Price)
+            </td>
+            <td>
+                @Html.TextBoxFor(m=>m.Price)
+            </td>
+        </tr>
+        <td><input type="submit" value="Add"></td>
+    </table>
+}
+

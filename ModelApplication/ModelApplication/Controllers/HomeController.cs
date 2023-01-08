@@ -49,6 +49,8 @@ namespace ModelApplication.Controllers
             String name = emp?.Name??"No name!!";
             int ?x = emp?.Id??0;
 
+            //emp.StudentFirstName = "m7md";
+
             return View(emp);
         }
     }

@@ -28,6 +28,24 @@
                 return _salary;
             }
         }
+       // private string _FirstName;
+        //private string _LastName;
+
+        //public string StudentFirstName
+        //{
+        //    get { return _FirstName; }
+        //    set
+        //    {
+        //        while (value!.Any(char.IsDigit))
+        //        {
+        //            Console.ForegroundColor = ConsoleColor.Red;
+        //            Console.WriteLine("ERROR: First name cannot contain a number. Please enter correct name.");
+        //            Console.ForegroundColor = ConsoleColor.White;
+        //            value = Console.ReadLine();
+        //        }
+        //        _FirstName = value!;
+        //    }
+        //}
 
     }
 }

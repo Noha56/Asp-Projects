@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "CreateBooks";
+}
+
+<h1>CreateBooks</h1>
+
+@foreach(var item in Model){
+    <ul>
+    <li>Title: @item.BTitle</li>
+    <li>ISBN: @item.ISBN</li>
+    <li>Price: @item.Price</li>
+    </ul>
+    <p style="color:palevioletred">-----------------</p>
+}
+
