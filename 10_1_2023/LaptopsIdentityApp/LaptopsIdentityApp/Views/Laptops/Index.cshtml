@@ -1,0 +1,70 @@
+﻿@model X.PagedList.IPagedList<LaptopsIdentityApp.Models.Laptop>
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.ActionLink("Manufacture",actionName:"Index",controllerName:"Laptops",new {sortOrder=ViewBag.Brand})
+            </th>
+            <th>
+                @Html.ActionLink("Processor",actionName:"Index",controllerName:"Laptops",new {sortOrder=ViewBag.Processor})
+            </th>
+            <th>
+                @Html.ActionLink("HDSize",actionName:"Index",controllerName:"Laptops",new {sortOrder=ViewBag.HDSize})
+            </th>
+            <th>
+                @Html.ActionLink("RAMSize",actionName:"Index",controllerName:"Laptops",new {sortOrder=ViewBag.RAMSize})
+            </th>
+            <th>
+                @Html.ActionLink("Price",actionName:"Index",controllerName:"Laptops",new {sortOrder=ViewBag.Price})
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Image)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manufacture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Processor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HDSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RamSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <img src="Images/@item.Image" style="width:35px;height:35px"/>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+Page @(Model.PageCount<Model.PageNumber?0:Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model,page=>Url.Action("Index",new  {page,sortOrder=ViewBag.CurrentSort} ))

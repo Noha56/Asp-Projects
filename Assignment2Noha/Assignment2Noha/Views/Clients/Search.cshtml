@@ -1,0 +1,23 @@
+﻿@model Client
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search</h1>
+@using(Html.BeginForm(FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(m=>m.ClientName)
+            </td>
+<td>
+                @Html.TextBoxFor(m=>m.ClientName)
+            </td>
+            <td>  <input type="submit" formaction="/Clients/Search" value="Search By Client Name" />
+            </td>
+
+        </tr>
+    </table>
+}
+

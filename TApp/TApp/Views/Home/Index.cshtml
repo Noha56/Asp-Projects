@@ -1,0 +1,287 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wherehouse</title>
+
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<style>
+    html {
+        font-family: 'Roboto', sans-serif;
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+        html.body {
+            scroll-behavior: smooth;
+            display: grid;
+            grid-template-columns: auto 0px;
+        }
+    /*NAVBAR*/
+    a {
+        text-decoration: none;
+    }
+
+
+    ul {
+        list-style: none;
+    }
+
+
+    .header {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+    .containers {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+
+    .navbar {
+        width: 100%;
+        height: 8rem;
+        border-bottom: 1px solid #ffffff1a;
+    }
+
+
+    .logo {
+        width: min-content;
+        height: min-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5rem;
+    }
+
+
+        .logo i {
+            margin: auto;
+            font-size: 3rem;
+        }
+
+
+    .nav-list {
+        display: flex;
+        position: relative;
+    }
+
+
+        .nav-list > li {
+            line-height: 8rem;
+        }
+
+
+        .nav-list a {
+            display: block;
+            color: #f0f8ff;
+            padding: 0 1.5rem;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+
+            .nav-list a:hover {
+                color: #407BFF;
+            }
+
+
+    /*HOME SECTION*/
+    .home {
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.603);
+        /* overlay*/
+        height: 900px;
+        /* size of overlay*/
+        color: white;
+        font-size: 11px;
+        font-family: 'STIX Two Text', serif;
+    }
+
+
+        .home::before {
+            content: "";
+            position: absolute;
+            background: url("~\images\imt.jpg") no-repeat center center/cover;
+            height: 900px;
+            width: 100%;
+            z-index: -1;
+        }
+
+
+
+    .main {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+    }
+
+
+        .main .heading {
+            font-size: 70px;
+            padding-top: 30px
+        }
+
+
+    .heading {
+        margin-top: 20rem;
+    }
+
+
+    .main p {
+        margin: auto;
+        font-weight: 100;
+        line-height: 25px;
+        font-size: 15px;
+    }
+
+    .box {
+        border: none;
+        border-bottom: 2px solid gold;
+        background-color: rgba(0, 0, 0, 0.562);
+        color: white;
+    }
+
+
+        .box:hover {
+            background-color: rgba(0, 0, 0, 0.562);
+            color: white;
+            border: none;
+        }
+
+
+    .login-box {
+        background-color: rgba(0, 0, 0, 0.486);
+        margin: auto;
+        width: 50%;
+        height: 160px;
+        border-radius: 10px;
+    }
+
+    .button {
+        transition-duration: 0.4s;
+    }
+
+
+        .button:hover {
+            background-color: #ffffff; /* Green */
+            color: #407BFF;
+        }
+
+    .button {
+        border: none;
+        color: #ffffff;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        margin-top: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        position: relative;
+        top: 20px;
+    }
+
+    .button1 {
+        background-color: #407BFF;
+    }
+    /* Blue */
+    .button2 {
+        background-color: #407BFF;
+    }
+    /* Blue */
+
+
+    h3 {
+        position: relative;
+        top: 20px;
+        font-size: 20px;
+    }
+
+</style>
+<body>
+    <main>
+        <div class="header">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 ">
+                        <div class="containers">
+
+                            <div class="navbar">
+                                <ul class="nav-list">
+                                    <li class="logo"><h1>WARE</h1> <sub> <h2>HOUSE</h2></sub></li>
+                                    <li class="HOMEL"> <a href="index.html">HOME</a></li>
+                                    <li class="nav-item">
+                                        <a  asp-area="" asp-controller="CustomerItems" asp-action="Index">Customer</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a  asp-area="" asp-controller="WearHouseItems" asp-action="Index">Warehouse</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Home page-->
+        <div class="home">
+            <div class="main">
+                <div class="home-box">
+                    <h1 class="heading">WEREHOUSE SYSTEM <br></h1>
+                    <P>
+
+                        <div class="login-box">
+                            <h3>
+                                this website will help you to organizations to control and administer warehouse
+
+
+                                <br>TAlso will allow warehouse officer to manage the shipping process
+
+                                <br>
+                            </h3>
+                    </P>
+
+
+
+                    <form>
+                        <button class="button button1" asp-action="Index"
+                                asp-controller="CustomerItems">
+                            Customer Merchandise
+                        </button>
+
+                        <button class="button button2" asp-action="Index"
+                                asp-controller="WearHouseItems">
+                            Warehouse Merchandise
+                        </button>
+                    </form>
+
+
+</body>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</html>
